@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/settings.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+    <title>Menu play</title>
+</head>
+<body>
+    <div class="background"></div>
+
+        <div id="Sound">
+            <div class="box">
+                <!-- <input type="range" class="range" value="0"
+                min="0" max="100" onmousemove="rangeSlider(this.value)">
+                <span id="rangeValue">0</span> -->
+                <audio controls src="song/m1.mp3" autoplay loop></audio>
+            </div>
+        </div>
+        <h1 id="titre">Settings</h1>
+
+        <div id="contenaireLeft">
+            <button id="btn_keysettings" class="btnLeft">Key Settings</button>
+            <button id="btn_sound" class="btnLeft">Sound</button>
+        </div>
+
+        <a href="index.html"><button id="btn_return">Return</button></a>
+        
+
+        <div id="Key">
+            <div class="KeyContainer">
+
+                <div class="KeyJump">
+                    <div class="text">
+                        <h2>Jump : </h2>
+                    </div>
+                        <button type="button" class="KeyButtons" data-direction="Jump"> </button>
+                </div>
+        
+                <div class="KeyCrouch">
+                    <div class="text">
+                        <h2>Crouch : </h2>
+                    </div>
+                        <button type="button" class="KeyButtons" data-direction="Crouch">CONTROL</button>
+                </div>
+        
+                <div class="KeyPlayPause">
+                    <div class="text">
+                        <h2>PlayPause: </h2>
+                    </div>
+                        <button type="button" class="KeyButtons" data-direction="PlayPause">P</button>
+                </div>
+        
+        
+            </div>
+        </div>   
+
+        
+    <script src="js/settings.js"></script> 
+    <script src="js/inputHandler.js"></script> 
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/play.css">
+    <title>Runner</title>
+</head>
+<body>
+    <div class="background"></div>
+
+    <h1 id="titre">Menu play</h1>
+    
+    <div id="contenaireLeft">
+        <button id="btn_maps" class="btnLeft">Maps</button>
+        <button id="btn_import" class="btnLeft">Imported Maps</button>
+    </div>
+
+    <a href="MenuPrincipal.html"><button id="btn_return">Return</button></a>
+
+    <div id="mapsList">
+        <a href="/map1/index.html"> Map 1 </a> 
+        <a href="/map2/index.html"> Map 2 </a>
+        <a href="/map3/index.html"> Map 3 </a>
+        <a href="/map4/index.html"> Map 4 </a>
+        <a href="/map5/index.html"> Map 5 </a>
+    </div>
+    
+    <div id="importMenu">
+        <div id="importList">
+            <a href="#"> Import Map 1 </a> 
+            <a href="#"> Import Map 2 </a>
+        </div>
+        <input type="file" id="upload" hidden="yes" value="./test" accept=".jmpr" onchange="uploadFile()"/>
+        <label for="upload">Import</label>
+    </div>
+<script src="js/play.js"></script>
+</body>
+</html>

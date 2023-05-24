@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    height: 93vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* displaying the game with full screen with and bottom border as the ground */
+.game {
+    width: 100vw;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+/* sticking the dino and the cactus to the floor */
+.dino,
+.cactus,
+.helico {
+    position: absolute;
+    bottom: 20%;
+}
+
+.dino {
+    position: absolute;
+    left: 5%;
+    height: 25%;
+    bottom: 15%;
+    /* border: 1px solid brown; */
+}
+
+.helico {
+    right: -35%;
+    height: 25%;
+    bottom: 45%;
+    /* border: 1px solid brown; */
+}
+
+.cactus {
+    right: -10%;
+    height: 12%;
+    bottom: 15%;
+    /* border: 1px solid brown; */
+}
+
+.moveCactus {
+    animation: cactus-move 12s linear infinite;
+}
+
+.moveHelico {
+    animation: helico-move 21s linear infinite;
+}
+
+@keyframes helico-move {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes cactus-move {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+.jump {
+    height: 401;
+    width: 255;
+    animation: dino-jump 2s;
+}
+
+.down {
+    height: 15% !important;
+    animation: dino-down 2s;
+}
+
+@keyframes dino-jump {
+    0% {
+        margin-bottom: 0;
+    }
+
+    50% {
+        margin-bottom: 150px;
+    }
+
+    100% {
+        margin-bottom: 0;
+    }
+}
+
+@keyframes dino-down {
+    0% {
+        margin-bottom: 0;
+    }
+
+    50% {
+        margin-bottom: -150px;
+    }
+
+    100% {
+        margin-bottom: 0;
+    }
+}
+
+.time {
+    position: absolute;
+    font-size: 3vmin;
+    right: 9vmin;
+    top: 4vmin;
+}
+
+#menu {
+    width: 100vw;
+    min-height: 50vh;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-150%);
+    background: rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #1E1E1E;
+    border-bottom: 2px solid #1E1E1E;
+    transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
+    z-index: 2;
+}
+
+/* @media screen and (max-width: 1499px) {
+    nav {
+        width: 90%;
+    }
+} */
+
+#menu.active {
+    transform: translate(0);
+}
+
+#menu a {
+    font-family: Quicksand, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+}

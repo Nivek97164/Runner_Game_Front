@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#background {
+    background: url("/img/img1.png") repeat-x;
+    background-size: cover;
+    position: absolute;
+    height: 120vh;
+    width: 3873px;
+    z-index: -1;
+}
+
+body {
+    height: 100vh;
+    overflow-y: hidden;
+    background: rgb(51, 51, 51);
+}
+
+h2 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 7px;
+}
+
+h3 {
+    color: white;
+    font-size: 1.4em;
+    margin-bottom: 7px;
+}
+
+button,
+input,
+label {
+    border: 2px solid rgb(0, 0, 0);
+    background: rgb(83, 78, 78);
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    padding: 4px 6px;
+}
+
+button {
+    max-height: 50px;
+    height: 7vh;
+
+}
+
+#editorDisplay {
+    background: rgba(red, green, blue, 0);
+}
+
+label:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+button:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+button:active {
+    background-color: rgb(56, 56, 56);
+}
+
+#editorContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    right: 0;
+    z-index: 1;
+}
+
+#editorDisplay {
+    width: 65%;
+}
+
+#editorMenuContainer {
+    border-left: 3px solid grey;
+    background-color: rgb(51, 51, 51);
+    width: 35%;
+}
+
+#editorMenuUpper {
+    position: absolute;
+    top: 19%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 9px;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.difficultyButton {
+    width: 5vw;
+    min-width: 70px;
+}
+
+#removeLastBlockButton {
+    width: 50%;
+}
+
+#exportButton {
+    height: 6vh;
+    position: absolute;
+    bottom: 1%;
+    right: 4%;
+}
+
+label {
+    height: 4.6vh;
+    position: absolute;
+    bottom: 1%;
+    right: 27%;
+    line-height: 35px;
+}
+
+.chosenDifficulty {
+    background-color: wheat;
+    color: black;
+}
+
+.chosenDifficulty:hover {
+    background-color: rgb(255, 212, 131);
+}
+
+#addTextContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#addTextContainer>button {
+    /* margin-top: 7px; */
+    margin-bottom: 7px;
+    width: 30px;
+    height: 30px;
+}
+
+#removeContainer {
+    display: flex;
+    gap: 8px;
+}
+
+#clearButton {
+    padding: 4px 15px;
+}
+
+#advancedOptionsDisplayButton,
+#advancedOptionsHideButton {
+    margin-top: 20px;
+    max-height: 30px;
+    width: 50%;
+    display: block;
+}
+
+#advancedOptionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#advancedOptionsContainer {
+    display: none;
+}

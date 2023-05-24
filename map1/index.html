@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/map1/CSS/style.css">
+  <script src="/map1/JS/main.js" type="module"></script>
+  <style>
+    #background {
+      background: url("/map1/img/BGNiv1.png") repeat-x;
+      background-size: cover;
+      position: absolute;
+      height: 120vh;
+      width: 3873px;
+      z-index: -1;
+    }
+
+    .backgroundAnimation {
+      animation: moveRight 100s linear infinite;
+    }
+
+    @keyframes moveRight {
+      from { background-position: 3873px 0px; } 
+      to { background-position: 0px 0px; }
+    }
+    
+    #background{
+      color: #FFF;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="background"></div>
+  <div class="world" data-world>
+
+    <div id="menu">
+      <a href="index.html"><button id="btn_return">Restart</button></a>
+      <a href="/index.html"><button id="btn_return">Quit</button></a>
+    </div>
+
+    <h1 class="time" id="t"></h1>
+    <img src="/map1/img/Run.png" class="dino" id="dino" data-dino>
+    <img src="/map1/img/Car1.png" id="cactus" class="cactus">
+    <!-- <img src="img/Houloucoupouterre.png" class="helico" id="helico"> -->
+  </div>
+</body>
+</html>

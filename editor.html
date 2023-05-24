@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/editor.css">
+</head>
+<body>
+    <div id="background"></div>
+    <section id="editorContainer">
+        <canvas id="editorDisplay"></canvas>
+        <div id="editorMenuContainer">
+            <div id="editorMenuUpper">
+                <div class="inputContainer">
+                    <h2>Title</h2>
+                    <input type="text" id="titleInput" placeholder="Enter title">
+                </div>
+                <div class="inputContainer">
+                    <h2>Creator</h2>
+                    <input type="text" id="creatorInput" placeholder="Enter creator">
+                </div>
+                <div>
+                    <h2>Difficulty</h2>
+                    <div class="buttonContainer">
+                        <button data-difficulty="1" class="difficultyButton">Beginner</button>
+                        <button data-difficulty="2" class="difficultyButton">Easy</button>
+                        <button data-difficulty="3" class="difficultyButton">Medium</button>
+                        <button data-difficulty="4" class="difficultyButton">Hard</button>
+                        <button data-difficulty="5" class="difficultyButton">Expert</button>
+                    </div>
+                </div>
+                <div>
+                    <div id="addTextContainer">
+                        <h2>Add <span data-count="1">a</span></h2>
+                        <button id="minusButton">-</button>
+                        <button id="plusButton">+</button>
+                        <h2 id="blockText">block</h2>
+                    </div>
+                    <div class="buttonContainer">
+                        <button data-type="A" class="addButton">Straight Road</button>
+                        <button data-type="B" class="addButton">Air obstacle</button>
+                        <button data-type="C" class="addButton">Ground Obstacle</button>
+                    </div>
+                </div>
+                <div id="removeContainer">
+                    <button id="removeLastBlockButton">Remove last Block</button>
+                    <button id="clearButton">Clear</button>
+                </div>
+                <div id="advancedMenuContainer">
+                    <button id="advancedOptionsDisplayButton">Advanced Options</button>
+                    <div id="advancedOptionsContainer">
+                        <div class="inputContainer">
+                            <h2>Background</h2>
+                            <input type="text" id="backgroundInput" placeholder="Enter background URL" data-key="background">
+                        </div>
+                        <div class="inputContainer">
+                            <h2>Melody</h2>
+                            <input type="text" id="melodyInput" placeholder="Enter melody URL" data-key="melody">
+                        </div>
+                        <div id="blockSkinChoiceContainer">
+                            <h2>Block skins</h2>
+                            <div class="inputContainer">
+                                <h3>Road block</h3>
+                                <input type="text" id="roadInput" placeholder="Enter block URL" data-key="A">
+                            </div>
+                            <div class="inputContainer">
+                                <h3>Aerial Obstacle</h3>
+                                <input type="text" id="aerialInput" placeholder="Enter Obstacle URL" data-key="B">
+                            </div>
+                            <div class="inputContainer">
+                                <h3>Ground Obstacle</h3>
+                                <input type="text" id="groundInput" placeholder="Enter Obstacle URL" data-key="C">
+                            </div>
+                        </div>
+                        <button id="advancedOptionsHideButton">Hide Options</button>
+                    </div>
+                </div>
+            </div>
+            <button id="exportButton">EXPORT</button>
+            <input type="file" id="upload" hidden="yes" value="./test" accept=".jmpr" onchange="uploadFile()"/>
+            <label for="upload">Import</label>
+            <a href="index.html"><button id="btn_return">Return</button></a>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>

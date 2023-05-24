@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#contenaireTitre {
+    display: flex;
+    justify-content: center;
+}
+
+#titre {
+    align-items: center;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 200;
+    width: 550px;
+    height: 100px;
+    cursor: default;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.background {
+    background: url("/img/img3.png") repeat-x;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 3873px;
+    animation: moveRight 200s linear infinite;
+    z-index: -1;
+    zoom: 0.8;
+}
+
+@keyframes moveRight {
+    100% {
+        transform: translateX(-1953px);
+    }
+}
+
+#modal-content {
+    margin-top: 23vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 26px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    height: 90vh;
+}
+
+#MenuEditor {
+    display: flex;
+    justify-content: space-around;
+}
+
+#close {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonEditor {
+    width: 330px;
+}
+
+.close {
+    width: 300px;
+    font-size: 50px;
+}
+
+button, h1 {
+    background: #1E1E1E;
+    border-radius: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 87px;  
+    color: #FFFFFF;
+    max-width: 450%;
+    top: 63%;
+    left: 41.5%;
+    cursor: pointer;
+    font-family: 'Mukta', sans-serif;
+    width: 400px;
+}
+
+button:hover,
+label:hover {
+    background-color: #5C5C5C;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
